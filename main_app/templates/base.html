@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finch Collector</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+    <link rel="stylesheet" href= "{% static 'css/style.css' %}">
+    <script src="https://kit.fontawesome.com/f74848c67c.js" crossorigin="anonymous"></script>
+  </head>
+  <body class="cyan">
+    <header>
+      <nav class="navbar-fixed">
+        <div class="nav-wrapper black">
+          <ul>
+            <li><a href="/" class="left brand-logo">&nbsp; &nbsp; Finch Collector</a></li>
+          </ul>
+
+          <ul class="right">
+            <li><a href="/index">About</a></li>
+            <li><a href="/finchs">View All My finch</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+      <!-- <h1>Welcome to our Humble Fench Collector Website</h1> -->
+    <main class="container">{% block content %} {% endblock %}</main>
+    <footer class="page-footer black">
+      <div class="center">All Rights Reserved, &copy; 2023 Finch Collector</div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<style>
+    .card-content{
+        background: #80eaf6;
+        box-shadow: 5px 5px;
+    }
+    h1{
+        text-align: center;
+    }
+    .text{
+        color: black;
+        font-weight: bold;
+    }
+
+    .des{
+        color: #1b398e;
+        font-weight:600;
+    }
+    #color{
+        font-weight: bolder;
+        color: #032172;
+    }
+</style>
+
+{% extends 'base.html' %} 
+{% block content %}
+<h1>Finch List</h1>
+{% for finch in finchs %} 
+    <div class="card">
+        <div class="card-content">
+            <span><img src="" alt=""></span>
+            <span class="card-title" id="color">{{ finch.name }}</span>
+            <p class="text">Description: <span class="des"> {{ finch.description }}</span></p>
+            <p class="text">Eat: <span class="des">{{ finch.eat }}</span></p>
+            <p class="text">Weight: <span class="des">{{ finch.weight }}</span></p>
+        
+        </div>
+    </div>
+{% endfor %}
+{% endblock %}
+
+
+
+
